@@ -1,0 +1,409 @@
+#pinScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  background: linear-gradient(150deg, #ffe5f1, #fcf0e8);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.pin-prompt {
+  font-family: 'Dongle', cursive;
+  font-size: 40px;
+  color: #e66487;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+#pinInput {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.pin-digit {
+  width: 40px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  border: 3px solid #ffc0cb;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#customKeyboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 300px;
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.key {
+  background-color: #ffc0cb;
+  color: #e66487;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 0;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  box-shadow: 0 4px 0 #e0a3af;
+  line-height: 1;
+}
+
+.key:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #e0a3af;
+}
+
+.key.backspace {
+    background-color: #f8bbd0;
+    color: #fff;
+    font-size: 24px;
+}
+
+html,body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Dongle', cursive, "Segoe UI", Roboto, Arial, sans-serif;
+ background: linear-gradient(150deg, #e3f2fd, #f8bbd0, #f0f4c3);
+  color: #333; 
+  overflow:hidden;
+  font-weight: 400; 
+  font-size: 22px; 
+}
+
+.center {
+  display: none;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align:center;
+  box-sizing:border-box;
+}
+
+#messageArea, .birthday-date, .caption, .music-status {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.card {
+  background: #EDEADE;
+  padding: 20px 20px 10px 20px;
+  border-radius: 20px;
+  max-width: 380px;
+  width: 85%;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25); 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative; 
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInScale 0.7s ease-out forwards;
+  border: 3px solid #ffb3c1; 
+}
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#ribbonGif {
+    position: absolute;
+    top: -20px; 
+    right: -20px; 
+    width: 80px; 
+    height: auto;
+    z-index: 10;
+}
+
+#danceGif {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+  align-self: center;
+}
+
+h1 { 
+    margin:0 0 0px; 
+    font-size: 45px;
+    font-weight: 700; 
+    letter-spacing: 2px;
+    color: #ff99c8; 
+    line-height: 1.1; 
+}
+.name { 
+    font-size: 35px;
+    color:#a9a5ff; 
+    font-weight:700; 
+    margin-bottom: 5px;
+    margin-top: -10px; 
+    line-height: 1.1; 
+}
+
+.birthday-date { 
+  font-size: 18px; 
+  color:#666; 
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding-top: 5px;
+}
+
+#messageArea {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 500; 
+  text-align: left; 
+  padding: 0 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.modal-title {
+  color: #a9a5ff;
+  margin-top: -35px; 
+  margin-bottom: 5px;
+  font-size: 40px; 
+  font-weight: 700;
+  font-family: 'Dongle', cursive; 
+  position: relative;
+  z-index: 5;
+}
+
+.icon-row {
+  display: flex;
+  justify-content: space-evenly; 
+  align-items: flex-start; 
+  width: 90%;
+  gap: 15px;
+  max-width: 250px;
+  margin: 10px auto 0 auto; 
+}
+
+.icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 65px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  line-height: 0; 
+}
+
+.icon {
+  width: 50px; 
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  object-fit: contain;
+}
+
+.icon-btn:hover .icon {
+    transform: translateY(-5px);
+    filter: brightness(1.1);
+}
+
+.icon-btn:active .icon {
+  transform: scale(0.93);
+}
+
+.music-status {
+    margin-top: -5px; 
+    font-size: 12px;
+    color: #ff99c8; 
+    height: 12px;
+    text-align: center;
+    font-weight: 700;
+    transition: opacity 0.3s ease;
+    opacity: 0; 
+    min-width: 60px; 
+}
+.music-status.visible {
+    opacity: 1;
+}
+
+#confettiCanvas {
+  position: fixed;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(255,255,255,0.15); 
+  backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px); 
+  animation: fadeIn 0.4s;
+  justify-content: center; 
+  align-items: center; 
+  padding: 20px; 
+  box-sizing: border-box; 
+}
+
+.modal-content {
+  max-height: 550px; 
+  height: auto;
+  overflow: auto;
+  width: auto; 
+  max-width: 900px;
+  background-color: rgba(255, 255, 255, 0.95); 
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  margin: 20px; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+  border: 3px solid #ffb3c1; 
+  padding-top: 50px; 
+}
+
+#messageModal .modal-content {
+    max-width: 400px; 
+    padding: 20px 25px; 
+    max-height: none; 
+    border: 3px solid #ffb3c1;
+    padding-top: 55px; 
+}
+
+@media (max-width: 500px) {
+    .modal-content {
+        max-width: 90%; 
+        margin: 20px auto; 
+        padding-top: 40px;
+    }
+    #messageModal .modal-content {
+         max-width: 85%;
+         padding-top: 50px;
+    }
+    
+    .pin-digit {
+        width: 35px;
+        height: 55px;
+        line-height: 55px;
+        font-size: 22px;
+    }
+    #customKeyboard {
+        max-width: 280px;
+        gap: 10px;
+    }
+    .key {
+        padding: 12px 0;
+        font-size: 26px;
+    }
+}
+
+
+.close-btn {
+  color: #ffb3c1;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1;
+  position: absolute;
+  top: 0px;
+  right: 15px; 
+  cursor: pointer;
+  transition: color 0.2s ease;
+  z-index: 10; 
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #e66487;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.slideshow-inner {
+  position: relative;
+  margin: 0 auto;
+  max-width: 700px;
+  height: 280px;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+.slide-img {
+  width: 100%;
+  height: 100%; 
+  border-radius: 8px;
+  object-fit: contain; 
+}
+
+.caption {
+  color: #777;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
