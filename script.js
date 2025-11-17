@@ -88,7 +88,8 @@ const slides = [
   { src: "photo17.jpg", "caption": "" },
   { src: "photo18.jpg", "caption": "" },
   { src: "photo19.jpg", "caption": "" },
-  { src: "photo20.jpg", "caption": "" }
+  { src: "photo20.jpg", "caption": "" },
+  { src: "photo21.jpg", "caption": "" },
 ];
 
 const birthdayDisplayElement = document.getElementById("birthdayDisplay");
