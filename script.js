@@ -90,7 +90,6 @@ const slides = [
   { src: "photo19.jpg", "caption": "" },
   { src: "photo20.jpg", "caption": "" },
   { src: "photo21.jpg", "caption": "" },
-  { src: "photo21.jpg", "caption": "" },
   { src: "photo22.jpg", "caption": "" },
   { src: "photo23.jpg", "caption": "" },
   { src: "photo24.jpg", "caption": "" },
